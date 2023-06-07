@@ -4,7 +4,7 @@ module.exports = [{
     state: 'WA',
     cuisines: 'Thai, Pan-Asian',
     pic: '/images/thai.jpg'
-}, {
+    }, {
     name: 'Coding Cat Cafe',
     city: 'Phoenix',
     state: 'AZ',
