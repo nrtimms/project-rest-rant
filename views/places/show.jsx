@@ -41,7 +41,28 @@ function show (data) {
                 <button type="submit" className="btn btn-danger">
                     Delete
                 </button>
-            </form>  
+            </form> 
+            <form method="POST" action={`/places/${data.place.id}/comment`}>
+                <div className="form-group col-sm-12">
+                    <label htmlFor="author">Author</label>
+                    <input id="author" name="author"/>
+                </div>
+                <div className="row">
+                    <div className="form-group col-sm-4">
+                        <label htmlFor="content">Content</label>
+                        <textarea id="content" name="content"></textarea>
+                    </div>
+                    <div className="form-group col-sm-4">
+                        <label htmlFor="stars">Star Rating</label>
+                        <input type="range" step="0.5" min="1" max="5" id="stars" name="stars"/>
+                    </div>
+                    <div className="form-group col-sm-2">
+                        <input type="checkbox" id="rant" name="rant"/>
+                        <label htmlFor="rant">Rant?</label>
+                    </div>
+                </div>
+                <input className="btn btn-primary" type="submit" value="Add Comment" />
+            </form> 
           </main>
         </Def>
     )
